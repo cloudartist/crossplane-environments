@@ -1,0 +1,12 @@
+apiVersion: storage.gcp.upbound.io/v1beta1
+kind: Bucket
+metadata:
+  generateName: crossplane-bucket-test-
+  namespace: flux-system
+  labels:
+    docs.crossplane.io/example: provider-gcp
+spec:
+  forProvider:
+    location: EUROPE-SOUTHWEST1
+  providerConfigRef:
+    name: default
